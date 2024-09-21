@@ -1,0 +1,66 @@
+.keyboard-container {
+  position: fixed;
+  height: 300px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #333;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: slide-up 0.3s ease;
+}
+
+.keyboard {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr); /* Layout for 10 columns */
+  gap: 10px;
+}
+
+.key {
+  padding: 15px;
+  background-color: #555;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.key:active {
+  background-color: #777;
+}
+
+.space-key {
+  grid-column: span 5; /* Spacebar spans 5 columns for wider width */
+}
+
+.shift-key {
+  grid-column: span 2; /* Shift key spans 2 columns for larger width */
+  background-color: #444;
+}
+
+.shift-key.active {
+  background-color: #888; /* Change color when Shift is active */
+}
+
+.close-btn {
+  margin-left: 543px;
+  margin-top: -48px;
+  height: 90px;
+  padding: 10px 31px;
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
